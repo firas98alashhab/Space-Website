@@ -288,6 +288,13 @@ li {
     padding-bottom: calc(40px + 20 * (100vw - 320px) / 1600);
   }
 }
+
+.theVideo {
+  margin: 50px auto 0 auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
 .breadcrumb-section .breadcrumb-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5618,6 +5625,10 @@ header .offcanvas-backdrop {
 @media (max-width: 576px) {
   .about-section .bg-effect {
     width: calc(100% - 15px);
+  }
+  header a .img-fluid {
+    width: 170px;
+    padding: 0;
   }
 }
 .about-section.right-version .about-content {
