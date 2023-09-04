@@ -154,7 +154,6 @@ body {
   position: relative;
   font-family: "Outfit", sans-serif;
   background: linear-gradient(0deg, #0a0e17, #0a0e17), linear-gradient(179.9deg, #0a5b75 -47.93%, #02111a 98.07%);
-  direction: rtl;
 }
 body:after {
   content: "";
@@ -240,8 +239,9 @@ li {
   display: inline-block;
 }
 
+
 .change-lang img {
-  margin-right: 30px;
+  margin-left: 30px;
   width: 35px;
   transition: transform 0.3s ease;
 }
