@@ -2308,11 +2308,12 @@ header .navbar-toggler:focus {
           box-shadow: none;
 }
 header .navbar-toggler-icon {
+  direction: rtl;
   width: 30px;
   height: 30px;
   background-color: rgba(var(--my-theme-color), 1);
   border-radius: 5px;
-  margin-right: 18px;
+  margin-left: 18px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2330,9 +2331,36 @@ header .navbar-toggler-icon {
 @media (max-width: 576px) {
   header .navbar-toggler-icon {
     position: absolute;
-    right: -2px;
-    top: 16px;
-    margin-right: calc(15px + 85 * (100vw - 320px) / 1600);
+    left: -2px;
+    top: 23.5px;
+    margin-left: calc(15px + 85 * (100vw - 320px) / 1600) !important;
+  }
+  .change-lang {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 338px) {
+  header .navbar-toggler-icon {
+    position: absolute;
+    left: -2px;
+    top: 22px;
+    margin-left: calc(15px + 85 * (100vw - 320px) / 1600) !important;
+  }
+}
+@media (max-width: 330px) {
+  header .navbar-toggler-icon {
+    position: absolute;
+    left: -2px;
+    top: 19px;
+    margin-left: calc(15px + 85 * (100vw - 320px) / 1600) !important;
+  }
+}
+@media (max-width: 300px) {
+  header .navbar-toggler-icon {
+    position: absolute;
+    left: -2px;
+    top: 17px;
+    margin-left: calc(15px + 85 * (100vw - 320px) / 1600) !important;
   }
 }
 header .navbar-toggler-icon .iconsax svg [stroke] {
@@ -4756,6 +4784,7 @@ header .offcanvas-backdrop {
    4.3 Contact Page scss
 ==========================**/
 .contact-section .contact-box {
+  direction: ltr;
   text-align: center;
   gap: 60px;
   display: -webkit-box;
@@ -4801,6 +4830,7 @@ header .offcanvas-backdrop {
   margin: 0 auto 15px;
 }
 .contact-section .contact-box h3 {
+  direction: rtl;
   color: rgba(var(--my-theme-color), 1);
   margin-bottom: 10px;
 }
@@ -5719,6 +5749,7 @@ header .offcanvas-backdrop {
   z-index: -1;
 }
 .feature-section .feature-box {
+  direction: ltr;
   background-color: #0a0e17;
   padding: 34px;
   border-radius: 4px;
@@ -5726,7 +5757,7 @@ header .offcanvas-backdrop {
   height: 100%;
 }
 [dir=rtl] .feature-section .feature-box {
-  direction: rtl;
+  direction: ltr;
 }
 @media (max-width: 1400px) {
   .feature-section .feature-box {
@@ -5756,6 +5787,7 @@ header .offcanvas-backdrop {
   margin-bottom: 20px;
 }
 .feature-section .feature-box .feature-top h3 {
+  direction: rtl;
   margin-bottom: 0;
   color: rgba(var(--white), 1);
   position: relative;
@@ -5804,6 +5836,7 @@ header .offcanvas-backdrop {
   transition: all 0.5s ease;
 }
 .feature-section .feature-box h4 {
+  direction: rtl;
   color: rgba(var(--content-color), 1);
   margin-bottom: 12px;
   display: -webkit-box;
@@ -6311,12 +6344,15 @@ header .offcanvas-backdrop {
   font-family: remixicon !important;
   font-style: normal;
   background-image: none;
+  margin-left: 0;
+  margin-right: auto;
 }
 .faq-section .accordion .accordion-item .accordion-button.collapsed {
   color: rgba(var(--white), 1);
 }
 .faq-section .accordion .accordion-item .accordion-button.collapsed:after {
   content: "\ea13";
+
 }
 .faq-section .accordion .accordion-item:last-child {
   margin-bottom: 0;
