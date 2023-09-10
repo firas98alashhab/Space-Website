@@ -250,6 +250,14 @@ li {
   transform: scale(1.1); 
 }
 
+.contact-icon {
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2); 
+}
+
 /*=====================
     2.1 Animation Scss start
 ==========================*/
@@ -1267,7 +1275,7 @@ li {
   color: rgba(var(--my-theme-color), 1);
   font-weight: 400;
   width: 48%;
-  margin: -10px auto 50px;
+  margin: 200px auto 5px;
 }
 @media (max-width: 1199px) {
   .title-basic h2 {
