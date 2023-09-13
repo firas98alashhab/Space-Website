@@ -5407,8 +5407,14 @@ header .offcanvas-backdrop {
   position: relative;
   overflow: hidden;
 }
+.service-section1 {
+  padding-top: 178px;
+  background: linear-gradient(180.02deg, rgba(var(--title-color), 0.05) 0.02%, rgba(var(--title-color), 0) 90.86%);
+  position: relative;
+  overflow: hidden;
+}
 @media (max-width: 991px) {
-  .service-section {
+  .service-section, .service-section1 {
     padding-top: calc(30px + 70 * (100vw - 320px) / 1600);
   }
 }
@@ -5424,6 +5430,19 @@ header .offcanvas-backdrop {
   opacity: 0.65;
   background-size: cover;
 }
+
+.service-section1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.65;
+  background-size: cover;
+}
+
 .service-section .service-box {
   padding: 40px;
   background: #0a0e17;
@@ -5431,22 +5450,48 @@ header .offcanvas-backdrop {
   border-radius: 4px;
   height: 100%;
 }
+
+.service-section1 .service-box {
+  padding: 40px;
+  padding-top: 25px;
+  padding-bottom: 55px;
+  background: #0a0e17;
+  position: relative;
+  border-radius: 4px;
+  height: 100%;
+}
 @media (max-width: 1400px) {
-  .service-section .service-box {
+  .service-section .service-box,
+  .service-section1 .service-box {
     padding: 30px;
   }
 }
 @media (max-width: 1199px) {
-  .service-section .service-box {
+  .service-section .service-box,
+  .service-section1 .service-box {
     padding: 20px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-box {
+  .service-section .service-box,
+  .service-section1 .service-box {
     padding: 14px;
   }
 }
 .service-section .service-box:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: linear-gradient(315.14deg, rgba(var(--my-theme-color), 0) 65%, rgba(var(--my-theme-color), 0.15) 83.43%);
+  border-radius: 4px;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.service-section1 .service-box:after {
   content: "";
   position: absolute;
   left: -1px;
@@ -5472,6 +5517,19 @@ header .offcanvas-backdrop {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+.service-section1 .service-box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(148deg, rgba(var(--my-theme-color), 0.15) -15.73%, rgba(var(--my-theme-color), 0) 98.72%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 .service-section .service-box .service-icon {
   width: 72px;
   height: 72px;
@@ -5481,30 +5539,44 @@ header .offcanvas-backdrop {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+.service-section1 .service-box .service-icon {
+  width: 72px;
+  height: 72px;
+  background: rgba(var(--title-color), 0.05);
+  border-radius: 4px;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 @media (max-width: 1400px) {
-  .service-section .service-box .service-icon {
+  .service-section .service-box .service-icon,
+  .service-section1 .service-box .service-icon {
     width: 62px;
     height: 62px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-box .service-icon {
+  .service-section .service-box .service-icon,
+  .service-section1 .service-box .service-icon {
     width: 52px;
     height: 52px;
   }
 }
-.service-section .service-box .service-icon img {
+.service-section .service-box .service-icon img,
+.service-section1 .service-box .service-icon img {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.service-section .service-box .service-icon .outline-icon {
+.service-section .service-box .service-icon .outline-icon,
+.service-section1 .service-box .service-icon .outline-icon {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.service-section .service-box .service-icon .bold-icon {
+.service-section .service-box .service-icon .bold-icon,
+.service-section1 .service-box .service-icon .bold-icon {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translate(-50%, -50%) rotate(180deg);
@@ -5512,10 +5584,12 @@ header .offcanvas-backdrop {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.service-section .service-box .service-content {
+.service-section .service-box .service-content,
+.service-section1 .service-box .service-content {
   margin-top: calc(18px + 7 * (100vw - 320px) / 1600);
 }
-.service-section .service-box .service-content h3 {
+.service-section .service-box .service-content h3,
+.service-section1 .service-box .service-content h3 {
   color: rgba(var(--white), 1);
   text-transform: capitalize;
   display: -webkit-box;
@@ -5526,41 +5600,51 @@ header .offcanvas-backdrop {
           align-items: center;
   gap: 10px;
 }
-.service-section .service-box .service-content p {
+.service-section .service-box .service-content p,
+.service-section1 .service-box .service-content p {
   margin-bottom: 0;
 }
-.service-section .service-box:hover:after {
+.service-section .service-box:hover:after,
+.service-section1 .service-box:hover:after {
   background: rgba(var(--my-theme-color), 0.25) !important;
 }
-.service-section .service-box:hover:before {
+.service-section .service-box:hover:before,
+.service-section1 .service-box:hover:before {
   opacity: 1;
   visibility: visible;
 }
-.service-section .service-box:hover .service-icon {
+.service-section .service-box:hover .service-icon,
+.service-section1 .service-box:hover .service-icon {
   background-color: rgba(var(--my-theme-color), 0.1);
 }
-.service-section .service-box:hover .service-icon .outline-icon {
+.service-section .service-box:hover .service-icon .outline-icon,
+.service-section1 .service-box:hover .service-icon .outline-icon {
   -webkit-transform: translate(-50%, -50%) rotate(-180deg);
           transform: translate(-50%, -50%) rotate(-180deg);
   opacity: 0;
   visibility: hidden;
 }
-.service-section .service-box:hover .service-icon .bold-icon {
+.service-section .service-box:hover .service-icon .bold-icon,
+.service-section1 .service-box:hover .service-icon .bold-icon {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.service-section .service-row > div:nth-child(2) .service-box:after {
+.service-section .service-row > div:nth-child(2) .service-box:after,
+.service-section1 .service-row > div:nth-child(2) .service-box:after {
   background: linear-gradient(45deg, rgba(var(--my-theme-color), 0) 65%, rgba(var(--my-theme-color), 0.15) 83.43%);
 }
-.service-section .service-row > div:nth-child(3) .service-box:after {
+.service-section .service-row > div:nth-child(3) .service-box:after,
+.service-section1 .service-row > div:nth-child(3) .service-box:after {
   background: linear-gradient(225deg, rgba(var(--my-theme-color), 0) 65%, rgba(var(--my-theme-color), 0.15) 83.43%);
 }
-.service-section .service-row > div:nth-child(4) .service-box:after {
+.service-section .service-row > div:nth-child(4) .service-box:after,
+.service-section1 .service-row > div:nth-child(4) .service-box:after {
   background: linear-gradient(135deg, rgba(var(--my-theme-color), 0) 65%, rgba(var(--my-theme-color), 0.15) 83.43%);
 }
-.service-section .service-info {
+.service-section .service-info,
+.service-section1 .service-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5571,18 +5655,22 @@ header .offcanvas-backdrop {
   padding-left: 32px;
 }
 @media (max-width: 1199px) {
-  .service-section .service-info {
+  .service-section .service-info,
+  .service-section1 .service-info {
     padding-left: 0;
   }
 }
-.service-section .service-info p {
+.service-section .service-info p,
+.service-section1 .service-info p {
   margin-bottom: 0;
 }
-.service-section .service-info a {
+.service-section .service-info a,
+.service-section1 .service-info a {
   margin-top: 35px;
 }
 @media (max-width: 991px) {
-  .service-section .service-info a {
+  .service-section .service-info a,
+  .service-section1 .service-info a {
     margin-top: 25px;
   }
 }

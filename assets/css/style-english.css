@@ -5406,8 +5406,14 @@ header .offcanvas-backdrop {
   position: relative;
   overflow: hidden;
 }
+.service-section1 {
+  padding-top: 178px;
+  background: linear-gradient(180.02deg, rgba(var(--title-color), 0.05) 0.02%, rgba(var(--title-color), 0) 90.86%);
+  position: relative;
+  overflow: hidden;
+}
 @media (max-width: 991px) {
-  .service-section {
+  .service-section, .service-section1 {
     padding-top: calc(30px + 70 * (100vw - 320px) / 1600);
   }
 }
@@ -5418,12 +5424,83 @@ header .offcanvas-backdrop {
   left: 0;
   top: 0;
   width: 100%;
-  height: 87%;
+  height: 84%;
   z-index: -1;
   opacity: 0.65;
   background-size: cover;
 }
+.service-section1:after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/service-bg.png");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 92%;
+  z-index: -1;
+  opacity: 0.65;
+  background-size: cover;
+}
+
+@media (max-width: 1400px) {
+  .service-section:after {
+    height: 85%;
+  }
+  .service-section1:after {
+    height: 93%;
+  }
+}
+@media (max-width: 767px) {
+  .service-section:after {
+    height: 89%;
+  }
+  .service-section1:after {
+    height: 95%;
+  }
+}
+@media (max-width: 576px) {
+  .service-section:after {
+    height: 90%;
+  }
+  .service-section1:after {
+    height: 97%;
+  }
+}
+@media (max-width: 400px) {
+  .service-section:after {
+    height: 93%;
+  }
+  .service-section1:after {
+    height: 98%;
+  }
+}
+@media (max-width: 350px) {
+  .service-section:after {
+    height: 94%;
+  }
+  .service-section1:after {
+    height: 98%;
+  }
+}
+@media (max-width: 300px) {
+  .service-section:after {
+    height: 95%;
+  }
+  .service-section1:after {
+    height: 98.5%;
+  }
+}
+
 .service-section .service-box {
+  padding: 40px;
+  padding-top: 30px;
+  padding-bottom: 55px;
+  background: #0a0e17;
+  position: relative;
+  border-radius: 4px;
+  height: 100%;
+}
+.service-section1 .service-box {
   padding: 40px;
   background: #0a0e17;
   position: relative;
