@@ -5010,7 +5010,7 @@ header .offcanvas-backdrop {
   text-align: center;
   padding: calc(100px + 90 * (100vw - 320px) / 1600) 0 calc(40px + 20 * (100vw - 320px) / 1600);
   position: relative;
-  background-image: url(../images/home/home-bg.png);
+  background-image: url(../images/home/home-bg1.png);
   background-size: cover;
   z-index: 1;
 }
